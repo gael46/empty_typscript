@@ -1,0 +1,43 @@
+{
+  "compilerOptions": { /* Docs: https://www.typescriptlang.org/tsconfig */
+    "target": "ES2020",
+    "module": "ES2020",
+    "outDir": "bin",
+    "rootDir": "src",
+    "strict": true,
+    "noImplicitAny": false,
+    "strictNullChecks": true,
+    "checkJs": true,
+    "allowJs": true,
+    "moduleResolution": "node",
+    "types": [
+      "node",
+      "jest"
+    ],
+    "lib": [
+      "ES2020"
+    ],
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowUnreachableCode": true,
+    "strictFunctionTypes": true,
+    "useUnknownInCatchVariables": false,
+    "exactOptionalPropertyTypes": true,
+    "composite": false,
+    "sourceMap": true
+  },
+  "ts-node": {
+    "experimentalSpecifierResolution": "node",
+    "transpileOnly": true,
+    "esm": true,
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.js"
+  ],
+  "exclude": [
+    "node_modules",
+    "<node_internals>/**",
+  ]
+}
