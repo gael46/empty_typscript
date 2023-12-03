@@ -6,9 +6,16 @@ const config = {
   },
   testRegex: '(/__test__/.*|(\\.|/)(test|spec))\\.[jt]sx?$',
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
-  verbose: false,
-  collectCoverage: false,
-  collectCoverageFrom: ['<rootDir>/src/app/**/*.ts'],
+  preset: 'ts-jest',
+  testEnvironment:'node',
+  globals: {
+    'ts-jest': {
+      isolatedModules:true
+    }
+  },
+  testPathIgnorePatterns : [
+      "<rootDir>/src/test/ignore"
+    ]
 };
 
 export default config;
