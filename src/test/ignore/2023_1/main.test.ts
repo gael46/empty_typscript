@@ -1,4 +1,4 @@
-import { computeSumNumber, computeGearRatio } from "../../app/1/main";
+import { computeSumNumber, computeGearRatio } from "../../../app/1/main";
 
 describe("compute computeSumNumber", () => {
   it("should computeSumNumber 1", () => {
