@@ -1,27 +1,20 @@
-import { computeSumNumber, computeGearRatio } from "../../app/1/main";
+import { parse } from "../../app/1/main";
 
-describe("compute computeSumNumber", () => {
-  it("should computeSumNumber 1", () => {
-    expect(
-      computeSumNumber(
-        "467..114..&...*......&..35..633.&......#...&617*......&.....+.58.&..592.....&......755.&...$.*....&.664.598.."
-      )
-    ).toEqual(4361);
-  });
-});
-describe("compute computeGearRatio", () => {
-  it("should computeGearRatio 1", () => {
-    expect(
-      computeGearRatio(
-        "467..114..&...*......&..35..633.&......#...&617*......&.....+.58.&..592.....&......755.&...$.*....&..598....."
-      )
-    ).toEqual(467835);
-  });
-  it("should computeGearRatio 2", () => {
-    expect(
-      computeGearRatio(
-        "854.6..10.....174....&...*.................&....................."
-      )
-    ).toEqual(5124);
+describe("run parse", () => {
+  it("should run parse", () => {
+    const { entries, _ } = parse(`jqt: rhn xhk nvd
+rsh: frs pzl lsr
+xhk: hfx
+cmg: qnr nvd lhk bvb
+rhn: xhk bvb hfx
+bvb: xhk hfx
+pzl: lsr hfx nvd
+qnr: nvd
+ntq: jqt hfx bvb xhk
+nvd: lhk
+lsr: lhk
+rzs: qnr cmg lsr rsh
+frs: qnr lhk lsr`);
+    expect(entries).toEqual(["ntq", "rzs"]);
   });
 });

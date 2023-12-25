@@ -19,8 +19,8 @@
 		"titleBar.inactiveBackground": "#220000"
 	},
 	"editor.codeActionsOnSave": {
-		"source.fixAll": true,
-		"source.fixAll.eslint": true
+		"source.fixAll": "explicit",
+		"source.fixAll.eslint": "explicit"
 	},
 	"typescript.suggest.autoImports": false,
 	"javascript.suggest.autoImports": false,
